@@ -9,9 +9,7 @@ export const Addexpense = (props) => {
     const [amount,setamount]=useState(0);
    const [category,setcategory]=useState('income')
 
-   const hide=(e)=>{
-       
-   }
+  
    
 
     const submit=(e)=>{
@@ -28,7 +26,7 @@ export const Addexpense = (props) => {
         {
             
             props.func(title,amount,category)
-            settitle('')
+            settitle('');
             setamount(0);
             setcategory('income');
         }

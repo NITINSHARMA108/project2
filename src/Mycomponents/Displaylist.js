@@ -11,21 +11,26 @@ export const Displaylist = (props) => {
     const lia={
         overflow:'hidden'
     }
+
     return (
         
         <>
         <div className='out'> 
             <h2 style={{backgroundColor:'black'}} className="text-light text-center head">Debit</h2>
             <div style={a} className="ldebit" >
-               {props.list1.map(t=><div style={lia} className="deb item" key={t.sno}> {t.text} <span className="amount">{t.amount}
-               <i onClick={()=>props.del1(t)} class="fas fa-times"></i></span></div>)}
+               {props.list1.map((t)=>
+               { 
+                return (
+               <div style={lia} className="deb item" key={t.sno}> {t.text} <span className="amount">{Number(t.amount)}
+               <i onClick={()=>props.del1(t)} class="fas fa-times"></i></span></div>)})}
+                
             
             </div>
         </div>
         <div className="in">
             <h2 style={{backgroundColor:'black'}} className="text-light text-center head">Credit</h2>
             <div style={a} className="lcredit">
-                {props.list2.map(t=><div style={lia} className="cred item" key={t.sno}> {t.text} <span className="amount">{t.amount}
+                {props.list2.map(t=><div style={lia} className="cred item" key={t.sno}> {t.text} <span className="amount">{Number(t.amount)}
                 <i onClick={()=>props.del2(t)} class="fas fa-times"></i></span></div    >)}
             </div>
 
